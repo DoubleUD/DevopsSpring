@@ -18,5 +18,7 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
+      - name: environment variable
+        run: set SECRET=testSecret
       - name: Build
-       rune: mvn -B package --file pom.xml
+        run: mvn -B package --file pom.xml
